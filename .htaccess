@@ -1,0 +1,18 @@
+<IfModule mod_rewrite.c>
+  Options -Indexes
+  RewriteEngine On
+  #RewriteBase /develop/kissit_can
+  
+  # Protect application and system files from being viewed
+  RewriteRule ^(?:core|application|system)\b.* index.php/$0 [L]  
+
+  # Directs all EE web requests through the site index file
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)$ index.php/$1 [L]
+  
+  # Removes index.php from ExpressionEngine URLs
+  RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s(.*)/index\.php
+  RewriteRule (.*?)index\.php/*(.*) $1$2 [R=301,NE,L]
+
+</IfModule>
