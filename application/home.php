@@ -24,6 +24,6 @@
     <title>Kissit Can</title>
   </head>
   <body>
-    <a href="<?php print path_url('handmaker'); ?>">Handmaker</a>
+    <a href="<?php print path_url('example'); ?>">Example</a>
   </body>
 </html>

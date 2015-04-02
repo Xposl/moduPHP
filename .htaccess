@@ -1,8 +1,8 @@
 <IfModule mod_rewrite.c>
   Options -Indexes
   RewriteEngine On
-  #RewriteBase /develop/kissit_can
-  
+  #RewriteBase /
+   
   # Protect application and system files from being viewed
   RewriteRule ^(?:core|application|system)\b.* index.php/$0 [L]  
 

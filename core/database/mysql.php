@@ -1,4 +1,8 @@
 <?php
+/**
+ * The implemention Class for Mysql from interface database
+ */
+
 require_once(CANROOTPATH.'/core/database/_database_.php');
 
 class DB implements database{
