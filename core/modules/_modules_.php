@@ -93,7 +93,8 @@ class Modules{
     }
     return $this->modules;
   }
- //get the modules info lists
+ 
+  //get the modules info lists
   private function refer_sys_modules_lists($path){
     foreach(array_slice(scandir($path), 2) as $file){
       $module_file = $path.'/'.$file;

@@ -4,6 +4,7 @@ $base_url = $_SERVER['REQUEST_URI'];
 if(isset($_SERVER['PATH_INFO'])){
   $base_url = substr($base_url,0,strpos($base_url,$_SERVER['PATH_INFO']));
 }
+
 /**
  * get path arguments by index
  */

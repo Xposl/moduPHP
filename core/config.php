@@ -1,11 +1,19 @@
 <?php
+/**
+ * The base core function about config
+ * in path core/config.php
+ * author: windrainsky@gmail.com
+ **/
 
+/**
+ * Read the config file from of you system file as SYSTEMNAME.info
+ */
 function config_get_config($filePath,$readSize=4096){
   $configs = array();
   if(file_exists($filePath)){
       $file_handle = fopen($filePath,'r');
       $data = fread($file_handle,$readSize);
-      
+
       if(preg_match_all('/^([a-zA-Z][_a-zA-Z0-9]*)[ ]*=[ ]*([\._a-zA-Z0-9 \/-]*)/m',$data,$matches)){
         for($i=0; $i<sizeof($matches[0]); $i++){
           $value = $matches[2][$i];
