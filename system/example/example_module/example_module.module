@@ -1,3 +1,13 @@
 <?php
 
+/**
+ * HOOK_module_info()
+ * @return {array} The base information of this module, include
+ *  'dependencies' => array({module_name}
+ */
 
+function example_module_module_info() {
+    return array(
+        'dependencies' => array()
+    );
+}
