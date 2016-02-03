@@ -1,11 +1,8 @@
 <?php
 /**
  * the initial function of this system
- * please name as
- * sys_[system_name]_init()
  **/
-
-function sys_example_init() {
+function sys_init() {
   global $database,$module;
   //To somthing
 }

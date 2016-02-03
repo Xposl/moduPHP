@@ -3,7 +3,7 @@
  * The implemention Class for Mysql from interface database
  */
 
-require_once(CANROOTPATH.'/core/database/_database_.php');
+require_once(ROOTPATH.'/core/database/_database_.php');
 
 class DB implements database{
   protected $connect;

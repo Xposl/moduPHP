@@ -1,7 +1,7 @@
 <?php
 
 function sys_route() {
-  sys_example_init();
+  sys_init();
   $route = array();
 
   $route['/'] = array(
